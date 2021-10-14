@@ -6,12 +6,15 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_instance" "ubuntu" {
+module "ec2-instance" {
+  source  = "app.terraform.io/Gritstone/ec2-instance/aws"
+  version = "3.2.0"
+
   ami               = var.ami_id
   instance_type     = var.instance_type
   availability_zone = "${var.aws_region}a"
 
   tags = {
     Name = var.name
-  }
+  }  
 }
