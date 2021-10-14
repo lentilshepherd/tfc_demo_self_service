@@ -7,7 +7,7 @@ provider "aws" {
 }
 
 module "ec2-instance" {
-  source  = "app.terraform.io/Gritstone/ec2-instance/aws"
+  source  = "app.terraform.io/gritstone/ec2-instance/aws"
   version = "3.2.0"
 
   ami               = var.ami_id
