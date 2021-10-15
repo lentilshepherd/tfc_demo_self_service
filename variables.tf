@@ -7,13 +7,3 @@ variable "ami_id" {
   description = "ID of the AMI to provision. Default is Ubuntu 14.04 Base Image"
   default     = "ami-09bedd705318020ae"
 }
-
-variable "instance_type" {
-  description = "type of EC2 instance to provision."
-  default     = "t2.micro"
-}
-
-variable "name" {
-  description = "name to pass to Name tag"
-  default     = "Provisioned by Terraform"
-}
