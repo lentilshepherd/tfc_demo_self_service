@@ -6,15 +6,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-module "ec2-instance" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "3.2.0"
-
-  ami               = var.ami_id
-  instance_type     = var.instance_type
-  availability_zone = "${var.aws_region}a"
-
-  tags = {
-    Name = var.name
-  }  
+module "tfc-demo-two-tier" {
+  source  = "app.terraform.io/Gritstone/tfc-demo-two-tier/aws"
+  version = "1.0.0"
 }
