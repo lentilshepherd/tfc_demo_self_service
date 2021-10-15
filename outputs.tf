@@ -1,3 +1,3 @@
-output "public_dns" {
-  value = module.ec2-instance.public_dns
+output "two-tier-address" {
+  value = module.terraform-aws-two-tier.address
 }
