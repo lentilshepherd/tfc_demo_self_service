@@ -8,5 +8,5 @@ provider "aws" {
 
 module "tfc-demo-two-tier" {
   source  = "app.terraform.io/Gritstone/tfc-demo-two-tier/aws"
-  version = "1.0.1"
+  version = "1.0.2"
 }
