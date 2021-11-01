@@ -6,17 +6,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-# Non-compliant config
-module "tfc-demo-bad-two-tier" {
-  source  = "app.terraform.io/Gritstone/tfc-demo-two-tier/aws"
-  version = "1.0.3"
-
-  # ubuntu-bionic
-  aws_ami = "ami-008485ca60c91a0f3"
-  service_name = "bad-two-tier"
-}
-
-# resource "aws_instance" "ubuntu" {
+# resource "aws_instance" "bad_ubuntu" {
 #   # ubuntu bionic
 #   ami               = "ami-008485ca60c91a0f3"
 #   instance_type     = "t2.micro"
@@ -30,7 +20,7 @@ module "tfc-demo-bad-two-tier" {
 # Compliant config
 module "tfc-demo-good-two-tier" {
   source  = "app.terraform.io/Gritstone/tfc-demo-two-tier/aws"
-  version = "1.0.3"
+  version = "1.0.4"
   aws_ami = "ami-02c7ed3df628d7ba2"
-  service_name = "good-two-tier"
+  service_name = "compliant-two-tier"
 }
