@@ -1,3 +1,3 @@
-output "public_dns" {
-  value = aws_instance.ubuntu.public_dns
+output "two-tier-address" {
+  value = module.tfc-demo-good-two-tier.address
 }
