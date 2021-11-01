@@ -6,16 +6,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_instance" "bad_ubuntu" {
-  # ubuntu bionic
-  ami               = "ami-008485ca60c91a0f3"
-  instance_type     = "t2.micro"
-  availability_zone = "eu-west-2a"
-
-  tags = {
-    Name = "non-compliant"
-  }
-}
 
 # Compliant config
 module "tfc-demo-good-two-tier" {
