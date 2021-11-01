@@ -7,7 +7,7 @@ provider "aws" {
 }
 
 # Non-compliant config
-module "tfc-demo-two-tier" {
+module "tfc-demo-bad-two-tier" {
   source  = "app.terraform.io/Gritstone/tfc-demo-two-tier/aws"
   version = "1.0.3"
 
@@ -28,7 +28,7 @@ resource "aws_instance" "ubuntu" {
 }
 
 # Compliant config
-module "tfc-demo-two-tier" {
+module "tfc-demo-good-two-tier" {
   source  = "app.terraform.io/Gritstone/tfc-demo-two-tier/aws"
   version = "1.0.3"
   aws_ami = "ami-02c7ed3df628d7ba2"
